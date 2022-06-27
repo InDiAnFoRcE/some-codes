@@ -1,0 +1,68 @@
+ 
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+shape = [rock, paper, scissors]
+#Write your code below this line 👇
+action = int(input("Choose your action. 0 for Rock, 1 for Paper and 2 for Scissors"))
+
+if action == 0:
+  print(rock)
+  print("Computer Chose:")
+  computer = random.randint(0, 2)
+  print(shape[computer])
+  if action == computer:
+    print("ITS A TIE")
+  elif computer == 1:
+    print("YOU LOST")
+  elif computer == 2:
+    print("YOU WON")
+    
+elif action == 1:
+  print(paper)
+  print("Computer Chose:")
+  computer = random.randint(0, 2)
+  print(shape[computer])
+  if action == computer:
+    print("ITS A TIE")
+  elif computer == 2:
+    print("YOU LOST")
+  elif computer == 0:
+    print("YOU WON")
+elif action == 2:
+  print(scissors)
+  print("Computer Chose:")
+  computer = random.randint(0, 2)
+  print(shape[computer])
+  if action == computer:
+    print("ITS A TIE")
+  elif computer == 0:
+    print("YOU LOST")
+  elif computer == 1:
+    print("YOU WON")
+  
+
